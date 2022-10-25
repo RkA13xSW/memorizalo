@@ -85,7 +85,7 @@ function aniadirCarta(carta, idx){
 
 
     const imgBack = document.createElement("img");
-        imgBack.src = "./IMGS/backcarta.png";
+        imgBack.src = "./IMGS/backCarta.png";
         imgBack.classList.add("carta-back");
 
     const imgCarta = document.createElement("img");
