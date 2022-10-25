@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemorizaLo</title>
+    <link rel="stylesheet" href="./CSS/main.css">
+    <link rel="icon" type="image/png" href="./favicon.png">
+</head>
+<body>
+    <div class="menu-selector">
+        <h1>¡Bienvenido a MemorízaLo!</h1>
+        <p>Seleccione la configuración deseada para iniciar el juego.</p>
+        
+        <div class="formulario-configuracion">
+            <div class="campo">
+                <label for="cantidad">Cantidad de cartas (A-K):</label>
+                <input type="number" name="cantidad" id="cantidad" value="13" max="13" min="1">
+            </div>
+            <div class="campo">
+               <label for="dificultad">Dificultad de cartas:</label>
+                <input type="number" name="dificultad" id="dificultad" value="1" max="4" min="1">
+            </div>
+            <button onclick="iniciarDatos()">Crear</button>
+        </div>
+        
+    </div>
+    <div class="juego noVer">
+        <div class="menu-juego">
+            <span id="tiempo"></span>
+            <p>Encontradas: <span id="cartas-descubiertas">0</span></p>
+            <p>Intentos: <span id="intentos"> 0 </span></p>
+        </div>
+        <div class="juego-cartas">
+
+        </div>
+        <div class="alerta-victoria noVer">
+            <div class="alerta-contenedor">
+                <div class="alerta-ventana">
+                    <h2>VICTORIA!</h2>
+                    <p>Enhorabuena, has ganado en: <span id="tiempoVictoria"></span></p>
+                    <p>Intentos: <span id="intentosVictoria"></span></p>
+                    <p>Encontradas: <span id="encontradasVictoria"></span></p>
+                    <div class="alerta-btns">
+                        <button onclick="volverAJugar()">Volver a jugar</button>
+                        <a href="./index.html"><button>Menu</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./JS/main.js"></script>
+</body>
+</html>
